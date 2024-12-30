@@ -14,7 +14,6 @@ reviews:
     - "*.gd"       # GDScript files
     - "*.tres"     # Godot resource files
     - "!*.import"  # Ignore Godot import files
-    - "!*.md"      # Ignore documentation
     - "!assets/**" # Ignore asset files
     - "!addons/**" # Ignore third-party addons
     
