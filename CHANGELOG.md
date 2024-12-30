@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Introduced .editorconfig file for C# development
+  - Standardized coding style and formatting rules
+  - Configured C# 12 and .NET 8 specific features
+  - Added comprehensive naming conventions
+  - Integrated Roslynator static code analysis rules
+  - Enforced consistent code documentation standards
 - CodeRabbit AI configuration for automated code reviews
   - Custom path filters for Godot/C# game development
   - Language-specific style rules
