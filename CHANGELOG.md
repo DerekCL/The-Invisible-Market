@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added .gitignore file
 - Introduced .editorconfig file for C# development
   - Standardized coding style and formatting rules
   - Configured C# 12 and .NET 8 specific features
