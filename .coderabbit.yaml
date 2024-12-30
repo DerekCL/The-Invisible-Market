@@ -1,0 +1,124 @@
+version: 1
+
+reviews:
+  request_changes_workflow: true
+  high_level_summary: true
+  poem_for_success: true
+  review_status: true
+  collapse_walkthrough: true
+  
+  # Specific to game development paths
+  path_filters:
+    - "*.cs"       # C# source files
+    - "*.tscn"     # Godot scene files
+    - "*.gd"       # GDScript files
+    - "*.tres"     # Godot resource files
+    - "!*.import"  # Ignore Godot import files
+    - "!*.md"      # Ignore documentation
+    - "!assets/**" # Ignore asset files
+    - "!addons/**" # Ignore third-party addons
+    
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+      - "DRAFT"
+    drafts: false
+    max_file_changes: 20  # Flags large PRs for manual review
+    min_approval_required: 2 # Requires at least 2 approvals for merges
+
+# Analysis settings
+analysis:
+  languages:
+    - csharp
+    - gdscript
+  
+  checks:
+    - name: best-practices
+      enabled: true
+      options:
+        max_cognitive_complexity: 10
+        max_function_length: 50
+        # Encourages explicit naming of intermediate variables to avoid
+        # confusion with 'magic numbers' or excessively terse variable names
+        enforce_explicit_variable_names: true
+
+    - name: performance
+      enabled: true
+      options:
+        check_n_plus_one: true
+        check_memory_leaks: true
+        check_scene_lifecycle: true
+        # Additional concurrency pitfalls detection (e.g., locks, coroutines)
+        check_concurrency_issues: true
+        
+    - name: security
+      enabled: true
+      options:
+        validate_input_sanitization: true
+        check_dependency_versions: true # Flags outdated or vulnerable libs
+
+    - name: game-specific
+      enabled: true
+      options:
+        check_resource_cleanup: true
+        check_signal_connections: true
+        check_physics_layers: true
+        check_animation_workflows: true
+        check_unreachable_nodes: true # Finds nodes that are never activated
+        
+    - name: coverage
+      enabled: true
+      options:
+        coverage_threshold_csharp: 80  # % of lines covered for C# code
+        coverage_threshold_gdscript: 75 # % of lines covered for GDScript code
+
+# Style settings
+style:
+  csharp:
+    indent_size: 4
+    max_line_length: 100
+    quote_type: double
+    enforce_namespaces: true
+    
+  gdscript:
+    indent_size: 4
+    max_line_length: 100
+    quote_type: double
+    enforce_signal_docstrings: true
+
+# Custom rules
+custom_rules:
+  bot_programming:
+    max_node_depth: 5
+    required_comments: true
+    performance_critical: true
+    cyclomatic_complexity: 10
+    # Encourages a TDD approach by checking if tests exist for new modules
+    require_tests_for_new_features: true
+
+  ui_components:
+    accessibility_check: true
+    responsive_design: true
+    dpi_scaling_check: true
+    enforce_color_contrast: true # Ensures UI text is visible over backgrounds
+
+# Notifications & Additional Reporting
+notifications:
+  pull_request_summary: true
+  custom_alerts:
+    - alert: "High Cognitive Complexity Detected"
+      trigger: "checks.best-practices.max_cognitive_complexity"
+    - alert: "Memory Leak Risk Identified"
+      trigger: "checks.performance.check_memory_leaks"
+    - alert: "Low Test Coverage"
+      trigger: "checks.coverage"
+
+# TDD Guidance
+tdd:
+  default_test_framework: "NUnit"  # or "XUnit", "GUT" (Godot Unit Test) for GDScript
+  enforce_minimum_tests_per_feature: true
+  suggest_test_patterns:
+    - "Arrange-Act-Assert"
+    - "Given-When-Then"
