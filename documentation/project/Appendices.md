@@ -15,12 +15,13 @@
   - **Processor**: Intel i5 or equivalent
   - **Memory**: 8 GB RAM
   - **Graphics**: Integrated GPU or better
-  - **Storage**: 500 MB available space
+  - **Storage**: 2 GB available space (including space for historical data cache)
+  - **Network**: Stable broadband connection (5 Mbps minimum)
 
 - **Performance Goals**
-  - Charts must update in real-time with minimal latency.
-  - Bots should process thousands of trades in historical data quickly without impacting UI responsiveness.
-
+  - Charts must update in real-time with latency under 100ms
+  - Bots should process 10,000 historical trades per second without dropping below 60 FPS
+  - UI response time should remain under 16ms (60 FPS) during bot operations
 ## 17.3. Mockups & Wireframes
 
 ### Visual Representations of Key Screens
