@@ -30,6 +30,11 @@
 
 5. **Settings & Customization**
    - Adjust game settings, customize UI themes, and manage account preferences.
+   - **Accessibility Options**
+     - Color blind modes
+     - Text scaling
+     - Screen reader support
+     - Keyboard navigation
 
 ## 12.2 Tutorials & Overlays
 
