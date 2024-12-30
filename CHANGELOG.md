@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- CodeRabbit AI configuration for automated code reviews
+  - Custom path filters for Godot/C# game development
+  - Language-specific style rules
+  - Bot programming and UI component review settings
 - Comprehensive game design documentation
   - Game overview and core concept definition
   - Goals and objectives documentation
