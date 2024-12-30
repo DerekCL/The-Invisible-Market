@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2024-03-21
-
 ### Added
 
 - Initial project structure and comprehensive game design documentation
@@ -31,4 +29,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Technical appendices and specifications
 
 [Unreleased]: https://github.com/yourusername/the-invisible-market/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/yourusername/the-invisible-market/releases/tag/v0.1.0
