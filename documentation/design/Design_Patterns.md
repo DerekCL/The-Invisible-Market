@@ -14,9 +14,15 @@ Adopt robust architectural patterns to ensure maintainability, scalability, and 
 - **Entity-Component-System (ECS)**
   - Utilize Godot's native ECS architecture to manage game entities and their behaviors efficiently, especially for handling complex bot interactions and real-time data processing.
 
-- **Singleton Pattern**
-  - Implement singletons for global managers (e.g., Trading Engine, Data Loader) to ensure centralized control and easy access across different scenes.
-
+**State Management Patterns**
+  - **Singleton Pattern**
+    - Implement singletons for global managers (e.g., Trading Engine, Data Loader)
+  - **State Machine Pattern**
+    - Manage game states (Menu, Trading, Paused)
+    - Handle transitions between states
+  - **Observer Pattern**
+    - Implement pub/sub for market data updates
+    - Handle UI updates based on state changes
 ## 6.2 UI/UX Patterns
 
 Ensure a consistent and intuitive user interface by adhering to established UI/UX patterns.
