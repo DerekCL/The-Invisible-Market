@@ -4,10 +4,10 @@
 
 - **Dual-Version Approach**
   - **Paid Version**
-    - Latest release (e.g., version 69) available for purchase at **$25** on various platforms.
+    - Latest release (current version) available for purchase at **$25** on various platforms.
     - Includes all current features, updates, and premium content.
   - **Demo Version**
-    - Previous version (e.g., version 68) available for free as a demo.
+    - Previous version available for free as a demo.
     - Limited features compared to the paid version to encourage upgrades (e.g., no bot programming, limited indicators).
 
 - **Open Source**
